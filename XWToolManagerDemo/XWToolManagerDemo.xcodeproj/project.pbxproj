@@ -15,7 +15,7 @@
 		7537F0651E8CA2E900197FC1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7537F0631E8CA2E900197FC1 /* LaunchScreen.storyboard */; };
 		7537F0701E8CA2E900197FC1 /* XWToolManagerDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7537F06F1E8CA2E900197FC1 /* XWToolManagerDemoTests.m */; };
 		7537F07B1E8CA2E900197FC1 /* XWToolManagerDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7537F07A1E8CA2E900197FC1 /* XWToolManagerDemoUITests.m */; };
-		7537F08A1E8CA30300197FC1 /* XWToolManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7537F0891E8CA30300197FC1 /* XWToolManager.m */; };
+		B63220F841E5A63E2EAC42F6 /* libPods-XWToolManagerDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 60D57B873F751885BEAE0976 /* libPods-XWToolManagerDemo.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +36,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		077A308928FE3CC2ABFF9FED /* Pods-XWToolManagerDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XWToolManagerDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-XWToolManagerDemo/Pods-XWToolManagerDemo.release.xcconfig"; sourceTree = "<group>"; };
+		0F0C9970A4CFEDADC7B2374F /* Pods-XWToolManagerDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XWToolManagerDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XWToolManagerDemo/Pods-XWToolManagerDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		60D57B873F751885BEAE0976 /* libPods-XWToolManagerDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-XWToolManagerDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7537F0521E8CA2E900197FC1 /* XWToolManagerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XWToolManagerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7537F0561E8CA2E900197FC1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7537F0581E8CA2E900197FC1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -52,8 +55,6 @@
 		7537F0761E8CA2E900197FC1 /* XWToolManagerDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XWToolManagerDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7537F07A1E8CA2E900197FC1 /* XWToolManagerDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XWToolManagerDemoUITests.m; sourceTree = "<group>"; };
 		7537F07C1E8CA2E900197FC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7537F0881E8CA30300197FC1 /* XWToolManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XWToolManager.h; path = ../XWToolManager.h; sourceTree = "<group>"; };
-		7537F0891E8CA30300197FC1 /* XWToolManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XWToolManager.m; path = ../XWToolManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B63220F841E5A63E2EAC42F6 /* libPods-XWToolManagerDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +90,8 @@
 				7537F06E1E8CA2E900197FC1 /* XWToolManagerDemoTests */,
 				7537F0791E8CA2E900197FC1 /* XWToolManagerDemoUITests */,
 				7537F0531E8CA2E900197FC1 /* Products */,
+				7F594C4B8AC8F09AA7984F21 /* Pods */,
+				F5D77D235897D3E482ADE95A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,8 +108,6 @@
 		7537F0541E8CA2E900197FC1 /* XWToolManagerDemo */ = {
 			isa = PBXGroup;
 			children = (
-				7537F0881E8CA30300197FC1 /* XWToolManager.h */,
-				7537F0891E8CA30300197FC1 /* XWToolManager.m */,
 				7537F0581E8CA2E900197FC1 /* AppDelegate.h */,
 				7537F0591E8CA2E900197FC1 /* AppDelegate.m */,
 				7537F05B1E8CA2E900197FC1 /* ViewController.h */,
@@ -145,6 +147,23 @@
 			path = XWToolManagerDemoUITests;
 			sourceTree = "<group>";
 		};
+		7F594C4B8AC8F09AA7984F21 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0F0C9970A4CFEDADC7B2374F /* Pods-XWToolManagerDemo.debug.xcconfig */,
+				077A308928FE3CC2ABFF9FED /* Pods-XWToolManagerDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F5D77D235897D3E482ADE95A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				60D57B873F751885BEAE0976 /* libPods-XWToolManagerDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -152,9 +171,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7537F07F1E8CA2E900197FC1 /* Build configuration list for PBXNativeTarget "XWToolManagerDemo" */;
 			buildPhases = (
+				B65454C8E6A414698D9A8BDF /* [CP] Check Pods Manifest.lock */,
 				7537F04E1E8CA2E900197FC1 /* Sources */,
 				7537F04F1E8CA2E900197FC1 /* Frameworks */,
 				7537F0501E8CA2E900197FC1 /* Resources */,
+				425E3D87C80D519EA19D1745 /* [CP] Embed Pods Frameworks */,
+				D83083EB43069BB34318B1BD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -276,6 +298,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		425E3D87C80D519EA19D1745 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-XWToolManagerDemo/Pods-XWToolManagerDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B65454C8E6A414698D9A8BDF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D83083EB43069BB34318B1BD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-XWToolManagerDemo/Pods-XWToolManagerDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7537F04E1E8CA2E900197FC1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -283,7 +353,6 @@
 			files = (
 				7537F05D1E8CA2E900197FC1 /* ViewController.m in Sources */,
 				7537F05A1E8CA2E900197FC1 /* AppDelegate.m in Sources */,
-				7537F08A1E8CA30300197FC1 /* XWToolManager.m in Sources */,
 				7537F0571E8CA2E900197FC1 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -431,6 +500,7 @@
 		};
 		7537F0801E8CA2E900197FC1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F0C9970A4CFEDADC7B2374F /* Pods-XWToolManagerDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 65Y8F76Y6Z;
@@ -443,6 +513,7 @@
 		};
 		7537F0811E8CA2E900197FC1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 077A308928FE3CC2ABFF9FED /* Pods-XWToolManagerDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 65Y8F76Y6Z;
@@ -522,6 +593,7 @@
 				7537F0811E8CA2E900197FC1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7537F0821E8CA2E900197FC1 /* Build configuration list for PBXNativeTarget "XWToolManagerDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +602,7 @@
 				7537F0841E8CA2E900197FC1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7537F0851E8CA2E900197FC1 /* Build configuration list for PBXNativeTarget "XWToolManagerDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -538,6 +611,7 @@
 				7537F0871E8CA2E900197FC1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

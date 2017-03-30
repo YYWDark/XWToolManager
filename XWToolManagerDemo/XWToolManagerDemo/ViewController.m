@@ -16,7 +16,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    XWToolManager *manager = [[XWToolManager alloc] init];
+    [manager doSomething];
     
+    UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"7.jpg"]];
+    imageView.frame = CGRectMake(10, 10, 100, 100);
+    [self.view addSubview:imageView];
 }
 
 

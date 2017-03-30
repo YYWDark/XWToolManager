@@ -1,0 +1,12 @@
+PODS:
+  - XWToolManager (0.0.1)
+
+DEPENDENCIES:
+  - XWToolManager (~> 0.0.1)
+
+SPEC CHECKSUMS:
+  XWToolManager: fc208430dfd526ce933b806bb98e35e1dad8daf1
+
+PODFILE CHECKSUM: 0333951e1bf672e0ac6b686a18849be9f880e83b
+
+COCOAPODS: 1.2.0
