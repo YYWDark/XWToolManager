@@ -29,22 +29,23 @@
 
 /* Begin PBXFileReference section */
 		1E8D8F8B28ED803379F2771733CCBF27 /* Pods-XWToolManagerDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-XWToolManagerDemo.debug.xcconfig"; sourceTree = "<group>"; };
-		24B8C40D698F51A2A28C2E7BD690641B /* 7.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = 7.jpg; path = XWToolManager/Assets/7.jpg; sourceTree = "<group>"; };
+		24B8C40D698F51A2A28C2E7BD690641B /* 7.jpg */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.jpeg; name = 7.jpg; path = XWToolManager/Assets/7.jpg; sourceTree = "<group>"; };
 		25F4B8CB491F2BAAD9F4452CE313C880 /* Pods-XWToolManagerDemo-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-XWToolManagerDemo-frameworks.sh"; sourceTree = "<group>"; };
 		2A7E02F183CAE7784B08D3303DDC2A71 /* Pods-XWToolManagerDemo-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-XWToolManagerDemo-resources.sh"; sourceTree = "<group>"; };
 		2FEEDE4C470C2C7A8BD2A2E7376F32DD /* XWToolManager-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "XWToolManager-dummy.m"; sourceTree = "<group>"; };
-		37FE96E8BEBB25E5D72E1194F0DB34E0 /* libXWToolManager.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libXWToolManager.a; path = libXWToolManager.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		37FE96E8BEBB25E5D72E1194F0DB34E0 /* libXWToolManager.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libXWToolManager.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CB8A2336300783F3A2BC5C6B380E36B /* Pods-XWToolManagerDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-XWToolManagerDemo.release.xcconfig"; sourceTree = "<group>"; };
 		5BF675A168132FD52AED630F977FE906 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		61BFDA736AE94EC1292797F62CD01851 /* Pods-XWToolManagerDemo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-XWToolManagerDemo-acknowledgements.plist"; sourceTree = "<group>"; };
+		7537F0951E8E099000197FC1 /* 8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 8.jpg; sourceTree = "<group>"; };
 		8DF5F335AC06A4110875DBAB11FA3812 /* XWToolManager-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "XWToolManager-prefix.pch"; sourceTree = "<group>"; };
 		92867BF249DD5ADF90A57D36A9F2A0A2 /* XWToolManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = XWToolManager.h; path = XWToolManager/Classes/XWToolManager.h; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A41A21FF5032F5313EF20DEEA00D36A1 /* Pods-XWToolManagerDemo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-XWToolManagerDemo-dummy.m"; sourceTree = "<group>"; };
 		B50FF966D4367EB0D3C3FFD2360440C6 /* XWToolManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = XWToolManager.m; path = XWToolManager/Classes/XWToolManager.m; sourceTree = "<group>"; };
 		B6342141232B6A54E197A8ABB774CD21 /* Pods-XWToolManagerDemo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-XWToolManagerDemo-acknowledgements.markdown"; sourceTree = "<group>"; };
 		E0203FCF2E38F9E0B8C4E69853543A3E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
-		E2527F1AA883D1DB30CC767E459A201A /* libPods-XWToolManagerDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-XWToolManagerDemo.a"; path = "libPods-XWToolManagerDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2527F1AA883D1DB30CC767E459A201A /* libPods-XWToolManagerDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-XWToolManagerDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBAF8AA4180CE038862F57D1A81E1364 /* XWToolManager.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = XWToolManager.xcconfig; sourceTree = "<group>"; };
 		EC32878090C4B2B93381956161EC0930 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
@@ -127,6 +128,7 @@
 		D5C7F10341555980641109BB6E0FDBC9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				7537F0951E8E099000197FC1 /* 8.jpg */,
 				24B8C40D698F51A2A28C2E7BD690641B /* 7.jpg */,
 			);
 			name = Resources;
@@ -167,7 +169,6 @@
 				D5C7F10341555980641109BB6E0FDBC9 /* Resources */,
 				54E9F7128410D2B10B57F16C0F34630A /* Support Files */,
 			);
-			name = XWToolManager;
 			path = XWToolManager;
 			sourceTree = "<group>";
 		};

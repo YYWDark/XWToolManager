@@ -1,13 +1,13 @@
 //
 //  ViewController.m
-//  XWToolManagerDemo
+//  Processing
 //
-//  Created by wyy on 2017/3/30.
+//  Created by wyy on 2017/3/31.
 //  Copyright © 2017年 wyy. All rights reserved.
 //
 
 #import "ViewController.h"
-#import "XWToolManager.h"
+
 @interface ViewController ()
 
 @end
@@ -16,20 +16,150 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    XWToolManager *manager = [[XWToolManager alloc] init];
-    [manager doSomething];
-    UIImage *image = [self imageProcessedUsingCoreImage:[UIImage imageNamed:@"7.jpg"]];
-    UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"7.jpg"]];
-    imageView.frame = CGRectMake(10, 40, self.view.frame.size.width - 20, 300);
+//    self.view.backgroundColor = [UIColor redColor];
+//    UIImage *image = [UIImage imageNamed:@"7.jpg"];
+//    //context 是重量器开销对象 你应该尽量的去重用它
+//    CIContext *context = [CIContext contextWithOptions:nil];
+//    CIFilter *filter = [CIFilter filterWithName:@"CISepiaTone"];
+//    CIImage *iImage = [CIImage imageWithCGImage:[image CGImage]];
+//    
+//    [filter setValue:iImage forKey:kCIInputImageKey];
+//    CIImage *result = [filter outputImage];
+//    CGImageRef resultRef = [context createCGImage:result fromRect:CGRectMake(0, 0, image.size.width, image.size.height)];
+    
+//    UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageWithCGImage:resultRef]];
+//    imageView.frame = CGRectMake(10, 350, self.view.frame.size.width - 20, 300);
+//    [self.view addSubview:imageView];
+    
+    
+    UIImage *start = [UIImage imageNamed:@"7.jpg"];
+    UIImage *target = [UIImage imageNamed:@"9.jpg"];
+    
+    CIImage *startImg = [CIImage imageWithCGImage:start.CGImage];
+    CIImage *endImg = [CIImage imageWithCGImage:target.CGImage];
+    
+    CIFilter *filter = [CIFilter filterWithName:@"CICopyMachineTransition" keysAndValues:
+                        @"inputImage" , startImg,
+                        @"inputTargetImage" , endImg,
+                        @"inputTime" , @9.0, nil];
+    
+//    CATransition *transition = [CATransition animation];;
+//    
+//    transition.duration = 7.75;
+//    transition.filter = filter;
+    CIContext *context = [CIContext contextWithOptions:nil];
+    CIImage *result = [filter outputImage];
+    CGImageRef resultRef = [context createCGImage:result fromRect:CGRectMake(0, 0, self.view.frame.size.width, 300)];
+    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(10, 350, self.view.frame.size.width - 20, 300)];
+//    [imageView.layer addAnimation:transition forKey:kCATransition];
+    
+    imageView.image = [UIImage imageWithCGImage:resultRef];
     [self.view addSubview:imageView];
     
-    
-    UIImageView *imageView1 = [[UIImageView alloc] initWithImage:image];
-    imageView1.frame = CGRectMake(10, 350, self.view.frame.size.width - 20, 300);
-    [self.view addSubview:imageView1];
-    
-    
 }
+
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+
+/*
+ 
+ Source
+ 
+ ViewController.swift
+ 
+ 
+ //
+ //  ViewController.swift
+ //  CoreImage013
+ //
+ 
+ import UIKit
+ import CoreImage
+ import Foundation
+ 
+ extension UIImage{
+ 
+ class func ResizeÜIImage(image : UIImage,width : CGFloat, height :
+ CGFloat)-> UIImage!{
+ 
+ // 指定された画像の大きさのコンテキストを用意.
+ UIGraphicsBeginImageContext(CGSizeMake(width, height))
+ 
+ // コンテキストに画像を描画する.
+ image.drawInRect(CGRectMake(0, 0, width, height))
+ 
+ // コンテキストからUIImageを作る.
+ let newImage = UIGraphicsGetImageFromCurrentImageContext()
+ 
+ // コンテキストを閉じる.
+ UIGraphicsGetImageFromCurrentImageContext()
+ 
+ return newImage
+ }
+ }
+ 
+ class ViewController: UIViewController{
+ // UIImageViewnの生成.
+ var myImageView:UIImageView!
+ var count = 0.0
+ var myTime = NSNumber(double:0.0)
+ let myFilter = CIFilter(name: "CICopyMachineTransition")
+ 
+ // 画像遷移の時間処理.
+ func update(timer: NSTimer) {
+ 
+ count += 0.1
+ myTime = count
+ 
+ myFilter.setValue(myTime, forKey: kCIInputTimeKey)
+ // 加工後の画像を得る.
+ let myOutputImage = UIImage(CIImage: myFilter.outputImage)
+ 
+ // 加工後の画像をUIImageViewに設定.
+ myImageView.image = myOutputImage
+ 
+ }
+ 
+ override func viewDidLoad() {
+ 
+ // UIImageViewを生成.
+ myImageView = UIImageView(frame: self.view.bounds)
+ self.view.addSubview(myImageView)
+ 
+ // 変換元の画像と遷移の終着点の画像を生成.
+ let CIImage1 = CIImage(image: UIImage.ResizeÜIImage(UIImage(named:"sample1.jpg")!,width: self.view.frame.maxX, height:self.view.frame.maxY))
+ 
+ let CIImage2 = CIImage(image: UIImage.ResizeÜIImage(UIImage(named: "sample2.jpg")!, width: self.view.frame.maxX, height:self.view.frame.maxY))
+ // トランジションカラーの指定.
+ let myColor = CIColor(color: UIColor.greenColor())
+ // コピーマシン要素の角度を指定するデフォルトは0.
+ let myAngle = NSNumber(double: 0)
+ // コピーマシン要素の幅を指定するデフォルトは1000.
+ let myWidth = NSNumber(double: 200)
+ 
+ myFilter.setValue(myColor, forKey: kCIInputColorKey)
+ myFilter.setValue(myAngle, forKey: kCIInputAngleKey)
+ myFilter.setValue(myWidth, forKey: kCIInputWidthKey)
+ myFilter.setValue(CIImage1, forKey: kCIInputImageKey)
+ myFilter.setValue(CIImage2, forKey: kCIInputTargetImageKey)
+ var count = 0
+ 
+ // Nstimerの設定.
+ NSTimer.scheduledTimerWithTimeInterval(0.001, target: self, selector: "update:", userInfo: nil, repeats: true)
+ 
+ // 加工後の画像を得る.
+ let myOutputImage = UIImage(CIImage: myFilter.outputImage)
+ 
+ // 加工後の画像をUIImageViewに設定.
+ myImageView.image = myOutputImage
+ }
+ 
+ }
+ */
 
 - (UIImage *)imageProcessedUsingCoreImage:(UIImage *)imageToProcess;
 {
@@ -49,11 +179,11 @@
     CIFilter *sepiaTone = [CIFilter filterWithName:@"CIAffineTransform" ];
     [sepiaTone setValue:inputImage forKey:kCIInputImageKey];
     [sepiaTone setValue:[NSValue valueWithCGAffineTransform:CGAffineTransformMake(0.7, 0.5, 0.3, 1.0, 0.0, 0.0)] forKey:@"inputTransform"];
-//    CIFilter *sepiaTone = [CIFilter filterWithName:@"CISepiaTone"
-//                                     keysAndValues: kCIInputImageKey, inputImage,
-//                           @"inputIntensity", [NSNumber numberWithFloat:.5],//它的默认值是1,最大可取值1,最小可取值0
-//                           nil];
-//    [sepiaTone setValue:[NSValue valueWithCGAffineTransform:CGAffineTransformMake(0.7, 0.5, 0.3, 1.0, 0.0, 0.0)] forKey:@"inputTransform"];
+    //    CIFilter *sepiaTone = [CIFilter filterWithName:@"CISepiaTone"
+    //                                     keysAndValues: kCIInputImageKey, inputImage,
+    //                           @"inputIntensity", [NSNumber numberWithFloat:.5],//它的默认值是1,最大可取值1,最小可取值0
+    //                           nil];
+    //    [sepiaTone setValue:[NSValue valueWithCGAffineTransform:CGAffineTransformMake(0.7, 0.5, 0.3, 1.0, 0.0, 0.0)] forKey:@"inputTransform"];
     
     CIImage *result = [sepiaTone outputImage];
     
@@ -70,17 +200,13 @@
 }
 
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 - (UIImage *)applyFilterChain:(UIImage *)source {
     CIFilter *colorFilter = [CIFilter filterWithName:@"CIPhotoEffectProcess" withInputParameters:@{kCIInputImageKey:[[CIImage alloc] initWithCGImage:source.CGImage]}];
     
     
     CIImage *bloomImage = [colorFilter.outputImage imageByApplyingFilter:@"CIBloom" withInputParameters:@{kCIInputRadiusKey : @(10.0),
-                                                                                                        kCIInputIntensityKey:@(1.0)
+                                                                                                          kCIInputIntensityKey:@(1.0)
                                                                                                           }];
     
     
@@ -91,7 +217,7 @@
     CGImageRef resultRef = [coreImageContext createCGImage:image fromRect:CGRectMake(0, 0, 550, 550)];
     UIImage *resultImage = [UIImage imageWithCGImage:resultRef];
     CGImageRelease(resultRef);
-   
+    
     return resultImage ;
 }
 
@@ -169,5 +295,4 @@
     CGImageRelease(imageRef); // YOU CAN RELEASE THIS NOW
     return sepiaImage;
 }
-
 @end
